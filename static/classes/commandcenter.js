@@ -65,7 +65,7 @@ function CommandCenter() {
 
             var r0ketId = Datapoint.id;
             if( that.r0ketExists( r0ketId ) ) {
-                tmpR0kets[ r0ketId ] = that.getR0ket( r0ketId );
+                tmpR0kets[ r0ketId ] = that.getR0ketById( r0ketId );
             } else {
                 tmpR0kets[ r0ketId ] = new roket( r0ketId, Datapoint.px, Datapoint.py );
             }
@@ -212,7 +212,7 @@ function CommandCenter() {
      * @return r0ket
      * @param r0ketId int
      */
-    this.getR0ket = function( r0ketId ) {
+    this.getR0ketById = function( r0ketId ) {
 
         if( !this.r0ketExists( r0ketId ) ) {
             return null;
